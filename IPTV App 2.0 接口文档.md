@@ -89,3 +89,25 @@
 | *items.name* | string | 视频名称 |
 | *items.poster* | string | 视频海报 |
 
+### 5. **直播列表**
+* 接口说明：获取直播列表
+* 请求地址：*/api/app/2.0/livechannels*
+* 请求方式：*GET*
+* 参数:
+>* *无*
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *id* | integer | 节目分类id |
+| *name* | integer | 节目分类名称 |
+| *index* | integer | 排序序号 |
+| *channels.id* | integer | 节目id |
+| *channels.name* | string | 节目名id |
+| *channels.channel* | string | 节目名 |
+| *channels.url* | string | 节目m3u8地址 |
+
