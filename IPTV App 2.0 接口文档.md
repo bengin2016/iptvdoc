@@ -15,11 +15,35 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *suc* | bool | 是否登录成功|
-| *msg* | string | 错误信息|
+| *code* | bool | 状态码|
+| *msg* | string | 信息|
 | *token* | string | 如果登录成功会返回token|
 
-### 2. **广告接口**
+### 2. **用户信息**
+* 接口说明：获取登录用户信息。
+* 请求地址：*/api/app/2.0/userinfo*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+
+* 说明:
+>无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | integer | 状态码 |
+| *id* | integer | 用户id |
+| *username* | integer | 用户帐号 |
+| *status* | integer | 用户帐号是否锁定 |
+| *group_name* | string | 用户组名 |
+| *end_time* | string | 用户到期时间 |
+| *mac_address1* | string | 绑定的无线网卡 |
+| *mac_address2* | string | 绑定的有线网卡 |
+
+### 3. **广告接口**
 * 接口说明：获取app相关广告信息。
 * 请求地址：*/api/app/2.0/ads*
 * 请求方式：*GET*
@@ -43,3 +67,25 @@
 | *captionad[0].playtimes* | integer  | 字幕广告播放次数|
 | *captionad[0].content* | string | 字幕广告内容|
 | *captionad[0].interval* | integer | 字幕广告间隔时间|
+
+
+### 4. **首页展示资源**
+* 接口说明：获取app首页展示资源。
+* 请求地址：*/api/app/2.0/portalhome*
+* 请求方式：*GET*
+* 参数:
+>* *无*
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *items.id* | integer | 视频id |
+| *items.cid* | integer | 视频分类id |
+| *items.category* | integer | 视频分类id |
+| *items.name* | string | 视频分类名称 |
+| *items.poster* | string | 视频海报 |
+
