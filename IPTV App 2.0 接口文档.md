@@ -39,7 +39,7 @@
 | *username* | integer | 用户帐号 |
 | *status* | integer | 用户帐号是否锁定 |
 | *group_name* | string | 用户组名 |
-| *end_time* | string | 用户到期时间 |
+| *expiration* | date | 用户到期时间 |
 | *mac_address1* | string | 绑定的无线网卡 |
 | *mac_address2* | string | 绑定的有线网卡 |
 
@@ -85,7 +85,7 @@
 | :--: | :--:| :-- |
 | *items.id* | integer | 视频id |
 | *items.cid* | integer | 视频分类id |
-| *items.category* | integer | 视频分类id |
-| *items.name* | string | 视频分类名称 |
+| *items.category* | integer | 视频分类名 |
+| *items.name* | string | 视频名称 |
 | *items.poster* | string | 视频海报 |
 
