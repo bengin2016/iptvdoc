@@ -198,3 +198,20 @@
 | *id* | integer | 视频id |
 | *name* | string | 视频名称 |
 | *poster* | string | 视频海报 |
+
+### 12. **更新查询** 
+接口说明：获取视频相关视频
+* 请求地址：*/api/app/2.0/udpate*
+* 请求方式：*GET*
+* 参数:
+>* *version* 当前版本 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *newversion* | bool | 是否有新版 |
+| *update_log* | string | 更新说明 |
+| *update_url* | string | app 更新地址 |
+| *size* | string | app 大小|
+| *version_name* | string | app 版本号|
