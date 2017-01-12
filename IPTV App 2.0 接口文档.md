@@ -59,9 +59,9 @@
 | *appad.src* | object | app启动广告访问地址 |
 | *appad.countdown* | object | app启动广告倒计时 |
 | *captionad* | array | 字幕广告(多个)|
-| *captionad[0].playtimes* | integer  | 字幕广告播放次数|
-| *captionad[0].content* | string | 字幕广告内容|
-| *captionad[0].interval* | integer | 字幕广告间隔时间|
+| *captionad.playtimes* | integer  | 字幕广告播放次数|
+| *captionad.content* | string | 字幕广告内容|
+| *captionad.interval* | integer | 字幕广告间隔时间|
 
 
 ### 4. **首页展示资源**
@@ -234,7 +234,7 @@
 | :--: | :--:| :-- |
 | *code* | string | 状态码 |
 | *token* | string | 令牌 |
-| *expired_at* | string | 更新说明 |
+| *expired_at* | string | 令牌到期时间 |
 
 ####  **状态码说明** 
 
