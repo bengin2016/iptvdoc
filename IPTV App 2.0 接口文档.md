@@ -77,7 +77,7 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *items.id* | integer | 视频id |
+| *items.vodid* | integer | 视频id |
 | *items.cid* | integer | 视频分类id |
 | *items.category* | integer | 视频分类名 |
 | *items.name* | string | 视频名称 |
@@ -136,16 +136,12 @@
 * 参数:
 >* 无 
 
-* 响应字段说明:
->* 无 
-
 ### 8. **视频分类**
 * 接口说明：获取视频分类
 * 请求地址：*/api/app/2.0/vodcategories*
 * 请求方式：*GET*
 * 参数:
->* *token* 令牌，获取方法参见用户登录 (必填)
->* *vodid* 视频id
+>* 无 
 
 * 响应字段说明:
 
@@ -154,3 +150,51 @@
 | *id* | integer | 视频id |
 | *name* | string | 视频名称 |
 | *poster* | string | 海报 |
+
+### 9. **视频分类标签**
+* 接口说明：获取视频分类
+* 请求地址：*/api/app/2.0/categorytags*
+* 请求方式：*GET*
+* 参数:
+>* 无 
+
+### 10. **视频列表** 
+接口说明：获取视频列表
+* 请求地址：*/api/app/2.0/vodlist*
+* 请求方式：*GET*
+* 参数:
+>* *page* 页数 
+>* *perpage* 每页记录条数 
+>* *keywords* 关键字 
+>* *category* 分类id 
+>* *tag* 分类标签 
+>* *region* 影片地区 
+>* *year* 年份 
+>* *order* 排序 （hits 点击排序/star 评分排序/new 时间先后倒序）
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *total* | integer | 总条数 |
+| *perpage* | string | 分页记录数 |
+| *page* | string | 页数 |
+| *pages* | string | 总页数 |
+| *items.id* | integer | 视频id |
+| *items.name* | string | 视频名称 |
+| *items.poster* | string | 视频海报 |
+
+### 11. **视频相关** 
+接口说明：获取视频相关视频
+* 请求地址：*/api/app/2.0/relatedvods*
+* 请求方式：*GET*
+* 参数:
+>* *vodid* 视频id 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *id* | integer | 视频id |
+| *name* | string | 视频名称 |
+| *poster* | string | 视频海报 |
