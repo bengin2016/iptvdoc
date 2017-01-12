@@ -8,8 +8,7 @@
 * 请求方式：*GET*
 * 参数:
 >* *username* 用户名 (必填)
->* *mac_address1* 无线网卡mac地址 (必填)
->* *mac_address2* 有线网卡mac地址 (必填)
+>* *mac_address* 网卡mac地址 (必填)
 
 * 响应字段说明:
 
@@ -40,8 +39,7 @@
 | *status* | integer | 用户帐号是否锁定 |
 | *group_name* | string | 用户组名 |
 | *expiration* | date | 用户到期时间 |
-| *mac_address1* | string | 绑定的无线网卡 |
-| *mac_address2* | string | 绑定的有线网卡 |
+| *mac_address* | string | 绑定的无线网卡 |
 
 ### 3. **广告接口**
 * 接口说明：获取app相关广告信息。
@@ -110,4 +108,31 @@
 | *channels.name* | string | 节目名id |
 | *channels.channel* | string | 节目名 |
 | *channels.url* | string | 节目m3u8地址 |
+
+### 6. **视频详情**
+* 接口说明：获取视频详情
+* 请求地址：*/api/app/2.0/vodinfo*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+>* *vodid* 视频id
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *id* | integer | 视频id |
+| *name* | string | 视频名称 |
+| *rank* | float | 评分 |
+| *poster* | string | 海报 |
+| *abstract* | string | 简介 |
+| *tags* | string | 标签 |
+| *actor* | string | 演员 |
+| *region* | string | 地区 |
+| *year* | integer | 年份 |
+| *vodlist.title* | string | 集数、标题、期数 |
+| *vodlist.url* | string | 播放地址 |
 
