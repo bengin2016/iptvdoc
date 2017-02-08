@@ -236,6 +236,43 @@
 | *token* | string | 令牌 |
 | *expired_at* | string | 令牌到期时间 |
 
+### 14. **启动动画获取接口** 
+接口说明：获取视频相关视频
+* 请求地址：*/api/app/2.0/getbootanimation*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *version* | string | 版本号 |
+| *src* | string | 启动动画 bootanimation.zip 下载地址 |
+
+### 15. **app相关图片获取接口** 
+接口说明：获取视频相关视频
+* 请求地址：*/api/app/2.0/getpics*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *backgroundimage* | string | 背景图 |
+| *btn1* | string | 按钮1 |
+| *btn2* | string | 按钮2 |
+| *btn3* | string | 按钮3 |
+| *btn4* | string | 按钮4 |
+
 ####  **状态码说明** 
 
 ##### 全局状态码 
