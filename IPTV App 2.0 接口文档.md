@@ -261,7 +261,7 @@
 >* 无
 
 * 说明:
->* 无
+>* 无	
 
 * 响应字段说明:
 
@@ -272,6 +272,9 @@
 | *btn2* | string | 按钮2 |
 | *btn3* | string | 按钮3 |
 | *btn4* | string | 按钮4 |
+| *btn1_package* | string | 按钮1 App 入口点 |
+| *btn2_package* | string | 按钮2 App 入口点 |
+| *btn4_package* | string | 按钮4 App 入口点 |
 
 ### 16. **启动器通知接口** 
 接口说明：获取视频相关视频
@@ -292,6 +295,24 @@
 | *content* | string | 发布类型 1=> 文字消息, 2=>图片消息 |
 | *type* | string | 消息内容 |
 | *picture* | string | 图片消息的图片 |
+
+### 17. **App 包管理** 
+接口说明：获取视频相关视频
+* 请求地址：*/api/app/2.0/appinstall*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *iptvdel* | string | 电视直播包名 |
+| *voddel* | string | 视频点播包名 |
+| *install* | string | 安装名地址 |
 
 ####  **状态码说明** 
 
