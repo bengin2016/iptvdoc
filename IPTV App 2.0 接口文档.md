@@ -298,7 +298,7 @@
 
 ### 17. **App 包管理** 
 接口说明：获取 App 安装包
-* 请求地址：*/api/app/2.0/appinstall*
+* 请求地址：*/api/app/2.0/apkinstall*
 * 请求方式：*GET*
 * 参数:
 >* 无
