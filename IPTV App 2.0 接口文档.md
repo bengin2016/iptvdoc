@@ -313,6 +313,7 @@
 | *iptvdel* | string | 电视直播包名 |
 | *voddel* | string | 视频点播包名 |
 | *install* | string | 安装包地址 |
+| *apk_pack* | string | 包名称 |
 
 ####  **状态码说明** 
 
