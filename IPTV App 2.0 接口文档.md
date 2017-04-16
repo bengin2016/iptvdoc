@@ -184,6 +184,16 @@
 | *items.id* | integer | 视频id |
 | *items.name* | string | 视频名称 |
 | *items.poster* | string | 视频海报 |
+| *items.rank* | string | 视频评分 |
+| *items.category* | string | 视频分类 |
+| *items.abstract* | string | 视频简介 |
+| *items.tags* | string | 视频标签 |
+| *items.actor* | string | 导演 |
+| *items.region* | string | 所属地区 |
+| *items.year* | string | 视频年份 |
+| *items.totalsize* | string | 视频文件总大小 |
+| *items.created_at* | string | 视频资源创建时间 |
+| *items.playtimes* | string | 播放次数 |
 
 ### 11. **视频相关** 
 接口说明：获取视频相关视频
@@ -201,7 +211,7 @@
 | *poster* | string | 视频海报 |
 
 ### 12. **更新查询** 
-接口说明：获取视频相关视频
+接口说明：app 更新查询
 * 请求地址：*/api/app/2.0/update*
 * 请求方式：*GET*
 * 参数:
@@ -314,6 +324,34 @@
 | *voddel* | string | 视频点播包名 |
 | *install* | string | 安装包地址 |
 | *apk_pack* | string | 包名称 |
+
+### 18. ** 7 日更新视频** 
+接口说明：获取 7 日更新视频
+* 请求地址：*/api/app/2.0/lastupdate
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *id* | integer | 视频id |
+| *name* | string | 视频名称 |
+| *poster* | string | 视频海报 |
+| *rank* | string | 视频评分 |
+| *category* | string | 视频分类 |
+| *abstract* | string | 视频简介 |
+| *tags* | string | 视频标签 |
+| *actor* | string | 导演 |
+| *region* | string | 所属地区 |
+| *year* | string | 视频年份 |
+| *totalsize* | string | 视频文件总大小 |
+| *created_at* | string | 视频资源创建时间 |
+| *playtimes* | string | 播放次数 |
 
 ####  **状态码说明** 
 
