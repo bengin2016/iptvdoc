@@ -52,16 +52,19 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *befor_play* | object | 映前广告 |
-| *befor_play.src* | string| 映前广告访问地址 |
-| *befor_play.countdown* | string| 映前广告倒计时 |
-| *appad* | object | app启动广告 |
-| *appad.src* | object | app启动广告访问地址 |
-| *appad.countdown* | object | app启动广告倒计时 |
+| *befor_play* | object | 映前广告 |		
+| *befor_play.total * | string| 映前广告个数 |
+| *befor_play.item.src* | string| 映前广告访问地址 |
+| *befor_play.item.countdown* | string| 映前广告倒计时 |
+| *appad* | object | app启动广告 |		
+| *appad.total * | string| app启动广告个数 |
+| *appad.item.src* | object | app启动广告访问地址 |
+| *appad.item.countdown* | object | app启动广告倒计时 |
 | *captionad* | array | 字幕广告(多个)|
-| *captionad.playtimes* | integer  | 字幕广告播放次数|
-| *captionad.content* | string | 字幕广告内容|
-| *captionad.interval* | integer | 字幕广告间隔时间|
+| *captionad.total* | array | 字幕广告(多个)|
+| *captionad.items[0].playtimes* | integer  | 字幕广告播放次数|
+| *captionad.items[0].content* | string | 字幕广告内容|
+| *captionad.items[0].interval* | integer | 字幕广告间隔时间|
 
 
 ### 4. **首页展示资源**
