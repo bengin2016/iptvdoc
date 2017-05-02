@@ -358,7 +358,7 @@
 
 ### 19. **apk首页管理的接口** 
 接口说明：apk首页管理的接口
-* 请求地址：*/api/app/2.0/indexmanage
+* 请求地址：*/api/app/2.0/indexmanage*
 * 请求方式：*GET*
 * 参数:
 >* 无
