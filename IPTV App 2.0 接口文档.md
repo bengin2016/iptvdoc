@@ -356,7 +356,7 @@
 | *created_at* | string | 视频资源创建时间 |
 | *playtimes* | string | 播放次数 |
 
-### 18. **apk首页管理的接口** 
+### 19. **apk首页管理的接口** 
 接口说明：apk首页管理的接口
 * 请求地址：*/api/app/2.0/indexmanage
 * 请求方式：*GET*
