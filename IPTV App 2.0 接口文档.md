@@ -43,7 +43,7 @@
 * 请求地址：*/api/app/2.0/ads*
 * 请求方式：*GET*
 * 参数:
->* *无*
+>* *token* 令牌，获取方法参见用户登录 (必填)
 
 * 说明:
 >如果设置为播放2次 间隔时间为10分钟则2次播放完成为20分钟，执行完后开始下一条的播放。 
@@ -53,11 +53,11 @@
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
 | *befor_play* | object | 映前广告 |		
-| *befor_play.total * | string| 映前广告个数 |
+| *befor_play.total* | string| 映前广告个数 |
 | *befor_play.item.src* | string| 映前广告访问地址 |
 | *befor_play.item.countdown* | string| 映前广告倒计时 |
 | *appad* | object | app启动广告 |		
-| *appad.total * | string| app启动广告个数 |
+| *appad.total* | string| app启动广告个数 |
 | *appad.item.src* | object | app启动广告访问地址 |
 | *appad.item.countdown* | object | app启动广告倒计时 |
 | *captionad* | array | 字幕广告(多个)|
@@ -361,7 +361,7 @@
 * 请求地址：*/api/app/2.0/indexmanage*
 * 请求方式：*GET*
 * 参数:
->* 无
+>* *token* 令牌，获取方法参见用户登录 (必填)
 
 * 说明:
 >* 无
@@ -374,7 +374,7 @@
 * 请求地址：*/api/app/2.0/appcaption
 * 请求方式：*GET*
 * 参数:
->* 无
+>* *token* 令牌，获取方法参见用户登录 (必填)
 
 * 说明:
 >* 无
