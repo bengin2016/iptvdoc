@@ -1,0 +1,140 @@
+# IPTV 酒店版 App 2.0 接口文档
+
+> 测试服务器 http://my.tmos.cn:15180/
+
+### 1.**首页相关资源**
+* 接口说明：获取首页相关资源。
+* 请求地址：*/api/app/hotel/index*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *title* | bool | 标题 |
+| *home_rotation_time* | integer | 首页轮播图片切换时间 |
+| *text1* | string | 扩展显示1 |
+| *text2* | string | 扩展显示2 |
+| *text3* | string | 扩展显示3 |
+| *text4* | string | 扩展显示4 |
+| *captionads*   | array | 首页幻灯片图片 |
+| *rotations*   | array | 首页滚动字幕 |
+
+### 2.**关于我们**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/aboutus*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *rotationinterval* | integer | 关于我们轮播图片切换时间 |
+| *rotations*   | array | 关于我们轮播图片 |
+| *rotations.index*   | string | 关于我们轮播图片的顺序 |
+| *rotations.src*   | string | 关于我们轮播图片的地址 |
+
+### 3.**客房分类**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/category/kefang*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *categories.id* | integer | 分类id |
+| *categories.name* | string | 客房分类名 |
+
+### 4.**酒水分类**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/category/jiushui*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *categories.id* | integer | 分类id |
+| *categories.name* | string | 酒水分类名 |
+
+### 5.**获取商品**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/goods*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *total* | integer | 总条数 |
+| *perpage* | integer | 分页记录数 |
+| *page* | integer | 页数 |
+| *pages* | integer | 总页数 |
+| *items.id* | integer | 商品id |
+| *items.goods_name* | string | 商品名 |
+| *items.price* | float | 商品原价 |
+| *items.vipprice* | float | 商品vip价格 |
+| *items.thumburl* | integer | 商品图 |
+| *items.description* | string | 商品描述 |
+
+### 6.**提交订单**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/hotel/ordersubmit*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+>* *goods_id* 商品id
+>* *count* 商品数量
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | integer | 状态码 |
+| *msg* | string | 消息 |
+        
+####  **状态码说明** 
+
+##### 全局状态码 
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| 0 | 正常 |
+| -1 | 无权访问 |
+
+##### 1. 用户相关状态码
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| *100* | 用户名不能为空 |
+| *101* | 用户不存在 |
+| *102* | mac地址不能为空 |
+| *103* | 用户不存在 |
+| *104* | token 不能为空 |
+| *105* | token 已过期, 访问心跳接口可以刷新token |
+| *106* | token 过期失效，需要重新登录|
+| *107* | 账号已过期 |
+| *108* | 账号被禁用 |
+
+##### 2. 点播相关状态码
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| *200* | vodid 不能为空 |
+| *201* | vodid不对，视频不存在 |
+
+##### 3. 酒店版状态码
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| *300* | 商品未上架或者商品不存在 |
+| *301* | 商品数量不对 |
+| *302* | 订单不存在 |
+
