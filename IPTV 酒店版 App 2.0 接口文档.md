@@ -71,7 +71,9 @@
 * 请求地址：*/api/app/hotel/goods*
 * 请求方式：*GET*
 * 参数:
->* 无
+>* *page* 页数
+>* *perpage* 每页记录数
+>* *cid* 商品分类id(必填)
 
 * 响应字段说明:
 
