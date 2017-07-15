@@ -39,7 +39,7 @@
 | *rotations.src*   | string | 关于我们轮播图片的地址 |
 
 ### 3.**客房分类**
-* 接口说明：获取关于我们相关资源。
+* 接口说明：获取客房分类。
 * 请求地址：*/api/app/hotel/category/kefang*
 * 请求方式：*GET*
 * 参数:
@@ -53,7 +53,7 @@
 | *categories.name* | string | 客房分类名 |
 
 ### 4.**酒水分类**
-* 接口说明：获取关于我们相关资源。
+* 接口说明：获取酒水分类。
 * 请求地址：*/api/app/hotel/category/jiushui*
 * 请求方式：*GET*
 * 参数:
@@ -67,7 +67,7 @@
 | *categories.name* | string | 酒水分类名 |
 
 ### 5.**获取商品**
-* 接口说明：获取关于我们相关资源。
+* 接口说明：通过分类id获取商品。
 * 请求地址：*/api/app/hotel/goods*
 * 请求方式：*GET*
 * 参数:
@@ -91,7 +91,7 @@
 | *items.description* | string | 商品描述 |
 
 ### 6.**提交订单**
-* 接口说明：获取关于我们相关资源。
+* 接口说明：-
 * 请求地址：*/api/hotel/ordersubmit*
 * 请求方式：*GET*
 * 参数:
