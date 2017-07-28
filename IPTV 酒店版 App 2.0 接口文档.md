@@ -121,7 +121,7 @@
 | *thumburl* | string | 按钮图片地址|
 | *package* | string | 入口点 |
 
-### 8.**app首页按钮**
+### 8.**播放前视频**
 * 接口说明：-
 * 请求地址：*/api/app/hotel/adsbeforeplay*
 * 请求方式：*GET*
