@@ -132,8 +132,9 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *url* | string | 视频地址 |
-| *countdown* | integer | 播放倒计时 |
+| *item.url* | string | 视频地址 |
+| *item.countdown* | integer | 播放倒计时 |
+| *total* | integer | 播放前视频总数 |
         
 ####  **状态码说明** 
 
