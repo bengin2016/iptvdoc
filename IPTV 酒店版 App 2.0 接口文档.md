@@ -135,6 +135,22 @@
 | *item.url* | string | 视频地址 |
 | *item.countdown* | integer | 播放倒计时 |
 | *total* | integer | 播放前视频总数 |
+
+### 9.**魅力山东幻灯片图片**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/mlsd*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *rotationinterval* | integer | 关于我们轮播图片切换时间 |
+| *rotations*   | array | 关于我们轮播图片 |
+| *rotations.index*   | string | 关于我们轮播图片的顺序 |
+| *rotations.src*   | string | 关于我们轮播图片的地址 |
         
 ####  **状态码说明** 
 
