@@ -96,8 +96,7 @@
 * 请求方式：*GET*
 * 参数:
 >* *token* 令牌，获取方法参见用户登录 (必填)
->* *goods_id* 商品id
->* *count* 商品数量
+>* *goods[]* 商品id => 商品数量 例如：goods[1] =2&goods[3]=4
 
 * 响应字段说明:
 
@@ -118,7 +117,6 @@
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
 | *title* | string | 按钮文字 |
-| *thumburl* | string | 按钮图片地址|
 | *package* | string | 入口点 |
 
 ### 8.**播放前视频**
@@ -174,6 +172,25 @@
 | :--: | :--:| :-- |
 | *code* | integer | 状态码 |
 | *content*   | string | 按钮描述 |
+
+
+### 11.**客房服务**
+* 接口说明：获取关于我们相关资源。
+* 请求地址：*/api/app/hotel/gethotelservice*
+* 请求方式：*GET*
+* 参数:
+>* 无 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *count* | integer | 状态码 |
+| *services.action *   | string | 按钮执行动作 1 打开第三方应用 2 点击返回文字 |
+| *services.name*   | string | 名称 |
+| *services.thumburl*   | string | 图标 |
+| *services.text*   | string | 返回文字 |
+| *services.package*   | string | 入口点 |
         
 ####  **状态码说明** 
 
@@ -246,5 +263,6 @@
 | *300* | 商品未上架或者商品不存在 |
 | *301* | 商品数量不对 |
 | *302* | 订单不存在 |
+
 
 
