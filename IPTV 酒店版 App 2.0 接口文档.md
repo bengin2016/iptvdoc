@@ -186,7 +186,7 @@
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
 | *count* | integer | 状态码 |
-| *services.action *   | string | 按钮执行动作 1 打开第三方应用 2 点击返回文字 |
+| *services.action*   | string | 按钮执行动作 1 打开第三方应用 2 点击返回文字 |
 | *services.name*   | string | 名称 |
 | *services.thumburl*   | string | 图标 |
 | *services.text*   | string | 返回文字 |
