@@ -156,7 +156,7 @@
 * 请求方式：*GET*
 * 参数:
 >* *name* 按钮别名
->一键退房=>'tuifang'
+>* 一键退房=>'tuifang'
 早餐预定=>'zaocan'
 客房清扫=>'qingsao'
 专车接送=>'zhuanche'
