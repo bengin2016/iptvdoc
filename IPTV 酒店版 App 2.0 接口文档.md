@@ -135,7 +135,7 @@
 | *total* | integer | 播放前视频总数 |
 
 ### 9.**魅力山东幻灯片图片**
-* 接口说明：获取关于我们相关资源。
+* 接口说明：获取魅力山东幻灯片图片相关资源。
 * 请求地址：*/api/app/hotel/mlsd*
 * 请求方式：*GET*
 * 参数:
@@ -145,38 +145,14 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *rotationinterval* | integer | 关于我们轮播图片切换时间 |
-| *rotations*   | array | 关于我们轮播图片 |
-| *rotations.index*   | string | 关于我们轮播图片的顺序 |
-| *rotations.src*   | string | 关于我们轮播图片的地址 |
+| *rotationinterval* | integer | 魅力山东幻灯片图片切换时间 |
+| *rotations*   | array | 魅力山东幻灯片图片 |
+| *rotations.index*   | string | 魅力山东幻灯片图片的顺序 |
+| *rotations.src*   | string | 魅力山东幻灯片图片的地址 |
 
-### 10.**按钮描述**
-* 接口说明：获取关于我们相关资源。
-* 请求地址：*/api/app/hotel/getbtndesc*
-* 请求方式：*GET*
-* 参数:
->* *name* 按钮别名
->* 一键退房=>'tuifang'
-早餐预定=>'zaocan'
-客房清扫=>'qingsao'
-专车接送=>'zhuanche'
-洗衣服务=>'xiyi'
-叫醒服务=>'jiaoxing'
-客房检修=>'jianxiu'
-咨询前台=>'zixun'
-
-
-* 响应字段说明:
-
-| 字段 | 类型 | 说明 |	  
-| :--: | :--:| :-- |
-| *code* | integer | 状态码 |
-| *content*   | string | 按钮描述 |
-
-
-### 11.**客房服务**
-* 接口说明：获取关于我们相关资源。
-* 请求地址：*/api/app/hotel/gethotelservice*
+### 10.**客房服务1**
+* 接口说明：获取客房服务相关资源。
+* 请求地址：*/api/app/hotel/gethotelservice1*
 * 请求方式：*GET*
 * 参数:
 >* 无 
@@ -186,11 +162,45 @@
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
 | *count* | integer | 状态码 |
+| *services.id*   | string | 服务id |
+| *services.title*   | string | 名称 |
+| *services.name*   | string | 名称 |
+| *services.content*   | string | 返回文字 |
+
+### 11.**客房服务2**
+* 接口说明：获取客房服务2相关资源。
+* 请求地址：*/api/app/hotel/gethotelservice2*
+* 请求方式：*GET*
+* 参数:
+>* 无 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *count* | integer | 状态码 |
+| *services.id*   | string | 服务id |
 | *services.action*   | string | 按钮执行动作 1 打开第三方应用 2 点击返回文字 |
 | *services.name*   | string | 名称 |
 | *services.thumburl*   | string | 图标 |
 | *services.text*   | string | 返回文字 |
 | *services.package*   | string | 入口点 |
+
+
+### 12.**提交服务订单**
+* 接口说明：-
+* 请求地址：*/api/hotel/servicesubmit*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+>* *services[0]* 索引 => 服务id 例如：services[0]=2&services[1]=4
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | integer | 状态码 |
+| *msg* | string | 消息 |
         
 ####  **状态码说明** 
 
@@ -263,6 +273,3 @@
 | *300* | 商品未上架或者商品不存在 |
 | *301* | 商品数量不对 |
 | *302* | 订单不存在 |
-
-
-
