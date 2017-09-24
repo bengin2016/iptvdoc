@@ -160,7 +160,7 @@
 * 请求地址：*/api/app/2.0/categorytags*
 * 请求方式：*GET*
 * 参数:
->* 无 
+>* *category* 分类id, 获取方法参见 视频分类 /api/app/2.0/vodcategories
 
 ### 10. **视频列表** 
 接口说明：获取视频列表
