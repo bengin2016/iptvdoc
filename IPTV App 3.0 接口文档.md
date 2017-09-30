@@ -234,6 +234,66 @@
 | *username* | string | 当前登录用户名 |
 | *outdate* | string | 当前用户到期时间 |
 
+### 13.**天干地支纪年法**
+* 接口说明：无
+* 请求地址：*/api/app/3.0/lunar*
+* 请求方式：*GET*
+* 参数:
+>* 无 
+
+* 响应字段说明:
+
+    "lunar_year": 2017,                 // 农历年		 <br>
+    "lunar_month": 4,                   // 农历月		 <br>
+    "lunar_day": 10,                    // 农历日		 <br>
+    "lunar_month_chinese": "四月",       // (汉字)农历月		<br>
+    "lunar_day_chinese": "初十",         // (汉字)农历日  	<br>
+    "ganzhi_year": "丁酉",               // (干支)年		 <br>
+    "ganzhi_month": "乙巳",              // (干支)月		 <br>
+    "ganzhi_day": "壬辰",                // (干支)日		 <br>
+    "animal": "鸡",                      // 生肖			 <br>
+    "term": "立夏",                      // 节气			 <br>
+    "is_leap": false,                    // 是否为闰月		 <br>
+    "gregorian_year": 2017,              // 公历年		 <br>
+    "gregorian_month": 5,                // 公历月		 <br>
+    "gregorian_day": 5,                  // 公历日		 <br>
+    "week_no": 5,                        // (数字)星期几		 <br>
+    "week_name": "星期五",                // (汉字)星期几		 <br>
+    "is_today": false,                   // 是否为今天		 <br>
+    "constellation": "金牛"               // 星座		 <br>
+
+### 14.**天气**
+* 接口说明：无
+* 请求地址：*/api/app/3.0/weather*
+* 请求方式：*GET*
+* 参数:
+>* 无 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *weather* | string | 实时天气情况 |
+| *temperature* | string | 实时温度 |
+| *temperature_min* | string | 今日最低温度 |
+| *temperature_max* | string | 今日最高温度 |
+
+### 15.**电视频道节目单**
+* 接口说明：无
+* 请求地址：*/api/app/3.0/epg*
+* 请求方式：*GET*
+* 参数:
+>* *name* 电视频道名 例如: CCTV-1, 综合频道
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | integer | 状态码 |
+| *msg* | string | 信息 |
+| *items.time* | integer | 节目播放时间 |
+| *items.program* | string | 节目名称 |
+
 ####  **状态码说明** 
 
 ##### 全局状态码 
@@ -263,3 +323,10 @@
 | *201* | 账号没有 vip 影城权限 |
 | *202* | vip 影片不存在 |
 | *203* | vip 影城没有开启 |
+
+##### 3. 电视节目单状态码
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| *300* | 电视频道名不能为空 |
+| *301* | 频道不存在 |
+| *302* | 频道存在, 但是节目信息匹配不正确 |
