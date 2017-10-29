@@ -225,7 +225,7 @@
 | *enable_expired_notify* | integer | 是否启用到期后提醒 |
 | *days_before_expired* | integer | 到期前提醒天数 |
 | *notify_before_expire_template* | string | 到期前提醒信息 |
-| *enable_expired_notify_template* | string | 到期后提醒信息 |
+| *expired_notify_template* | string | 到期后提醒信息 |
 | *enable_systempwd* | integer | 是否开启系统设置控制密码 |
 | *systempwd* | string | 系统设置密码 |
 | *enable_ntp* | integer | 内网NTP时间校准 |
