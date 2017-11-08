@@ -283,7 +283,7 @@
 * 请求地址：*/api/app/3.0/epg*
 * 请求方式：*GET*
 * 参数:
->* *name* 电视频道名 例如: CCTV-1, 综合频道
+>* *name* 电视频道名 从 api/app/2.0/livechannels 接口获取的 channels.name 字段 例如: CCTV-1
 
 * 响应字段说明:
 
