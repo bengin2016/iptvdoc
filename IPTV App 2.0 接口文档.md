@@ -107,6 +107,7 @@
 | *channels.id* | integer | 节目id |
 | *channels.name* | string | 节目名id |
 | *channels.channel* | string | 节目名 |
+| *channels.channelname* | string | 节目名别名 |
 | *channels.url* | string | 节目m3u8地址 |
 
 ### 6. **视频详情**
