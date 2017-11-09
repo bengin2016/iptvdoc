@@ -294,6 +294,24 @@
 | *items.time* | integer | 节目播放时间 |
 | *items.program* | string | 节目名称 |
 
+
+### 16. **更新查询** 
+接口说明：app 更新查询
+* 请求地址：*/api/app/3.0/update*
+* 请求方式：*GET*
+* 参数:
+>* *version* 当前版本 
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *newversion* | bool | 是否有新版 |
+| *update_log* | string | 更新说明 |
+| *update_url* | string | app 更新地址 |
+| *size* | string | app 大小|
+| *version_name* | string | app 版本号|
+
 ####  **状态码说明** 
 
 ##### 全局状态码 
