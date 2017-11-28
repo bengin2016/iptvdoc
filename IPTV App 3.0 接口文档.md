@@ -312,6 +312,30 @@
 | *size* | string | app 大小|
 | *version_name* | string | app 版本号|
 
+### 17. **直播列表**
+* 接口说明：获取直播列表
+* 请求地址：*/api/app/3.0/livechannels*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *updated_at* | integer | 节目单上次更新时间 |
+| *items.id* | integer | 节目分类id |
+| *items.name* | integer | 节目分类名称 |
+| *items.index* | integer | 排序序号 |
+| *items.channels.id* | integer | 节目id |
+| *items.channels.name* | string | 节目名id |
+| *items.channels.channel* | string | 节目名 |
+| *items.channels.channelname* | string | 节目名别名 |
+| *items.channels.url* | string | 节目m3u8地址 |
+
 ####  **状态码说明** 
 
 ##### 全局状态码 
@@ -348,3 +372,4 @@
 | *300* | 电视频道名不能为空 |
 | *301* | 频道不存在 |
 | *302* | 频道存在, 但是节目信息匹配不正确 |
+| *303* | 节目信息响应为空 |
