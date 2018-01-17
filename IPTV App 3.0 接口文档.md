@@ -336,6 +336,146 @@
 | *items.channels.channelname* | string | 节目名别名 |
 | *items.channels.url* | string | 节目m3u8地址 |
 
+
+### 18. **新版桌面启动器配置**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/config*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *install* | integer | APK安装全局设置：1 => 允许所有用户安装APK 2=>需要独立授权 0=>禁止所有用户安装APK |
+| *supersetting* | integer | 是否允许执行高级系统设置：1=>允许 0=>禁止 |
+| *pkgname* | array | 要锁定的应用包名称 |
+
+### 19. **新版桌面启动器模板**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/theme*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *theme* | string | 主题包下载地址 |
+| *notifyurl* | string | 推送回调通知, 在下载完成之后, 请求这个地址通知后台 |
+
+### 20. **新版桌面启动器 默认应用控制**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/apps*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *items.id* | integer | id |
+| *items.title* | string | 按钮名称 |
+| *items.app_package_name* | string | 启动的apk包名 |
+| *items.app_default_name* | string | 未下载应用显示名称 |
+| *items.appurl* | string | apk地址 |
+
+### 21. **新版桌面启动器 应用替换**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/apps/replace*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |	   
+| *total* | integer | 应用总数 |
+| *items.id* | integer | id |
+| *items.title* | string | 应用名称 |
+| *items.target_appname* | string | 要替换的应用包名称 |
+| *items.new_appname* | string | 要推送的应用包名称 |
+| *items.appversion* | string | 要推送的应用版本 |
+| *items.apkurl* | string | 下载地址 |
+| *items.notifyurl* | string | 推送回调通知, 在下载完成之后, 请求这个地址通知后台 |
+
+### 22. **新版桌面启动器 推送新应用**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/apps/push*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |	  
+| *total* | integer | 应用总数 |
+| *items.id* | integer | id |
+| *items.title* | string | 应用名称 |
+| *items.appversion* | string | 要推送的应用版本 |
+| *items.apkurl* | string | 下载地址 |
+| *items.notifyurl* | string | 推送回调通知, 在下载完成之后, 请求这个地址通知后台 |
+
+### 23. **新版桌面启动器 启动器通知推送**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/getnotify*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *notify.type* | integer | 通知类型 1文字消息 2图片消息 |
+| *items.title* | string | 通知标题 |
+| *items.content* | string | 通知内容 如果是图片消息则是图片链接 |
+| *items.time* | string | 通知时间 |
+
+### 24. **新版桌面启动器 启动广告管理**
+* 接口说明：获取直播列表
+* 请求地址：*/api/launche/1.0/ads*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *total* | integer | 广告总条数 |
+| *items.id* | integer | 广告id |
+| *items.time* | integer | 广告播放时间 |
+| *items.type* | string | 广告类型 <br> pic 图片广告  <br> video 视频广告 |
+| *items.src* | string | 广告地址 |
+
+	  				
 ####  **状态码说明** 
 
 ##### 全局状态码 
@@ -373,3 +513,11 @@
 | *301* | 频道不存在 |
 | *302* | 频道存在, 但是节目信息匹配不正确 |
 | *303* | 节目信息响应为空 |
+
+##### 4. 桌面启动器状态码
+| 状态码 |  说明 |	  
+| :--: | :-- |
+| *400* | 没有任何启用的主题 |
+| *401* | 主题压缩包不存在 |
+| *402* | 非法请求, 请重启请求主题接口 |
+| *403* | 通知 id 不正确 |
