@@ -432,6 +432,7 @@
 | *total* | integer | 应用总数 |
 | *items.id* | integer | id |
 | *items.title* | string | 应用名称 |
+| *items.app_package_name* | string | 包名 |
 | *items.appversion* | string | 要推送的应用版本 |
 | *items.apkurl* | string | 下载地址 |
 | *items.notifyurl* | string | 推送回调通知, 在下载完成之后, 请求这个地址通知后台 |
