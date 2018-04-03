@@ -511,7 +511,8 @@
 | *total* | integer | 套餐总数 |
 | *items.id* | integer | 套餐id |
 | *items.name* | string | 套餐名称 |
-| *items.is_recommend * | integer | 是否推荐 |
+| *items.thumburl* | string | 套餐缩略图 |
+| *items.is_recommend* | integer | 是否推荐 |
 | *items.is_hot* | integer | 是否热门 |
 
 ### 27. **点播套餐订单提交**
