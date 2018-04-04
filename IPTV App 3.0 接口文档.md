@@ -21,6 +21,7 @@
 | *lang* | string | 用户组语言 空 用户选择模式 / cn 中文 / en 英文 |
 | *fee_mode* | integer | 用户组收费模式 0 免费 / 1 收费 |
 | *account_expired_at* | string | 用户到期时间, 如果为空则为没有充值 |
+| *is_expired* | integer | 用户是否到期 |
 
 ### 2.**首页幻灯片**
 * 接口说明：无
