@@ -22,6 +22,8 @@
 | *fee_mode* | integer | 用户组收费模式 0 免费 / 1 收费 |
 | *account_expired_at* | string | 用户到期时间, 如果为空则为没有充值 |
 | *is_expired* | integer | 用户是否到期 |
+| *viptheater_enable* | integer | 允许使用vip影院 |
+| *luc_enable* | integer | 允许使用桌面启动器 |
 
 ### 2.**首页幻灯片**
 * 接口说明：无
