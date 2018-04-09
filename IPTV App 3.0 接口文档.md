@@ -23,7 +23,6 @@
 | *account_expired_at* | string | 用户到期时间, 如果为空则为没有充值 |
 | *is_expired* | integer | 用户是否到期 |
 | *viptheater_enable* | integer | 允许使用vip影院 |
-| *luc_enable* | integer | 允许使用桌面启动器 |
 
 ### 2.**首页幻灯片**
 * 接口说明：无
@@ -357,7 +356,7 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *install* | integer | APK安装全局设置：1 => 允许所有用户安装APK 2=>需要独立授权 0=>禁止所有用户安装APK |
+| *install* | integer | APK安装全局设置：1 => 允许用户安装APK  0=>禁止用户安装APK |
 | *supersetting* | integer | 是否允许执行高级系统设置：1=>允许 0=>禁止 |
 | *pkgname* | array | 要锁定的应用包名称 |
 
