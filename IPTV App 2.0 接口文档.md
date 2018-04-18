@@ -331,7 +331,7 @@
 
 ### 18. **7 日更新视频** 
 接口说明：获取 7 日更新视频
-* 请求地址：*/api/app/2.0/lastupdate
+* 请求地址：*/api/app/2.0/lastupdate*
 * 请求方式：*GET*
 * 参数:
 >* 无
@@ -425,6 +425,32 @@
 | *total* | integer | 图片总数 |
 | *name* | string | 图片名称 |
 | *url* | string | 图片地址 |
+
+### 23. **纯直播换台图片广告**
+  
+接口说明：手机客户端APP轮播图片管理
+* 请求地址：*/api/app/2.0/czbapkad*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+
+* 说明:
+>* 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *id* | integer | 图片广告id |
+| *src* | string | 图片广告地址 |
+| *time* | string | 图片广告播放间隔时间 |
+| *position* | string | 图片广告位置 <br> top_left 左上角 <br>top_right 右上角 <br>bottom_left 左下角 <br>bottom_right 右下角 <br>bottom_center 下部居中  |
+| *height* | string | 图片广告高度 |
+| *width* | string | 图片广告宽度 |
+
+
 
 ####  **状态码说明** 
 
