@@ -444,11 +444,9 @@
 | *id* | integer | 图片广告id |
 | *src* | string | 图片广告地址 |
 | *time* | string | 图片广告播放间隔时间 |
-| *position* | string | 图片广告位置 <br> top_left 左上角 <br>top_right 右上角 <br>bottom_left 左下角 <br>bottom_right 右下角 <br>bottom_center 下部居中  |
+| *position* | string | 图片广告位置 <br> left_up 左上角 <br>right_up 右上角 <br>left_down 左下角 <br>right_down 右下角  |
 | *height* | string | 图片广告高度 |
 | *width* | string | 图片广告宽度 |
-
-
 
 ####  **状态码说明** 
 
