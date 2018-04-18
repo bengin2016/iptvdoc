@@ -46,13 +46,12 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *total* | integer | 图片广告总条数 |
-| *items.id* | integer | 图片广告id |
-| *items.src* | string | 图片广告地址 |
-| *items.time* | string | 图片广告播放间隔时间 |
-| *items.position* | string | 图片广告位置 <br> top_left 左上角 <br>top_right 右上角 <br>bottom_left 左下角 <br>bottom_right 右下角 <br>bottom_center 下部居中  |
-| *items.height* | string | 图片广告高度 |
-| *items.width* | string | 图片广告宽度 |
+| *id* | integer | 图片广告id |
+| *src* | string | 图片广告地址 |
+| *time* | string | 图片广告播放间隔时间 |
+| *position* | string | 图片广告位置 <br> top_left 左上角 <br>top_right 右上角 <br>bottom_left 左下角 <br>bottom_right 右下角 <br>bottom_center 下部居中  |
+| *height* | string | 图片广告高度 |
+| *width* | string | 图片广告宽度 |
 
 ### 4.**apk启动广告**
 * 接口说明：无
