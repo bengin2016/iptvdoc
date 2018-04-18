@@ -18,6 +18,11 @@
 | *msg* | string | 信息|
 | *token* | string | 如果登录成功会返回token|
 | *expired_at* | string | 如果登录成功会返回token失效的时间戳，token失效需要访问心跳接口刷新token |
+| *lang* | string | 用户组语言 空 用户选择模式 / cn 中文 / en 英文 |
+| *fee_mode* | integer | 用户组收费模式 0 免费 / 1 收费 |
+| *account_expired_at* | string | 用户到期时间, 如果为空则为没有充值 |
+| *is_expired* | integer | 用户是否到期 |
+| *viptheater_enable* | integer | 允许使用vip影院 |
 
 ### 2.**首页幻灯片**
 * 接口说明：无
@@ -350,7 +355,7 @@
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *install* | integer | APK安装全局设置：1 => 允许所有用户安装APK 2=>需要独立授权 0=>禁止所有用户安装APK |
+| *install* | integer | APK安装全局设置：1 => 允许用户安装APK  0=>禁止用户安装APK |
 | *supersetting* | integer | 是否允许执行高级系统设置：1=>允许 0=>禁止 |
 | *pkgname* | array | 要锁定的应用包名称 |
 
@@ -475,7 +480,100 @@
 | *items.type* | string | 广告类型 <br> pic 图片广告  <br> video 视频广告 |
 | *items.src* | string | 广告地址 |
 
-	  				
+
+### 25. **点播支付方式**
+* 接口说明：获取支付方式
+* 请求地址：*/api/app/3.0/payments*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *items.name* | string | 支付方式名称 |
+| *items.enable* | integer | 支付方式是否开启 |
+
+### 26. **点播套餐**
+* 接口说明：获取直播列表
+* 请求地址：*/api/app/3.0/vod/packages*
+* 请求方式：*GET*
+* 参数:
+>* 无
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *total* | integer | 套餐总数 |
+| *items.id* | integer | 套餐id |
+| *items.name* | string | 套餐名称 |
+| *items.thumburl* | string | 套餐缩略图 |
+| *items.is_recommend* | integer | 是否推荐 |
+| *items.is_hot* | integer | 是否热门 |
+
+### 27. **点播套餐订单提交**
+* 接口说明：点播套餐订单提交
+* 请求地址：*/api/app/3.0/vod/package/order*
+* 请求方式：*GET*
+* 参数:
+>* *token* 令牌，获取方法参见用户登录 (必填)
+>* *payment* 支付方式，获取方法参见 25 支付方式(必填)
+>* *pid* 套餐id，获取方法参见 26 点播套餐 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | bool | 状态码|
+| *msg* | string | 信息|
+| *order_sn* | string | 订单序列号 |
+
+### 28. **点播套餐订单二维码**
+* 接口说明：点播套餐订单二维码
+* 请求地址：*/api/app/3.0/vod/package/orderqrcode*
+* 请求方式：*GET*
+* 参数:
+>* *order_sn* 订单号 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | bool | 状态码|
+| *msg* | string | 信息|
+| *url* | string | 订单支付二维码|
+
+### 29. **订单状态检查**
+* 接口说明：订单状态检查
+* 请求地址：*/api/app/3.0/vod/package/ordercheck*
+* 请求方式：*GET*
+* 参数:
+>* *order_sn* 订单号 (必填)
+
+* 说明:
+> 无
+
+* 响应字段说明:
+
+| 字段 | 类型 | 说明 |	  
+| :--: | :--:| :-- |
+| *code* | bool | 状态码|
+| *paid* | integer | 是否支付 |
+
 ####  **状态码说明** 
 
 ##### 全局状态码 
