@@ -456,9 +456,11 @@
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
 | *notify.type* | integer | 通知类型 1文字消息 2图片消息 |
-| *items.title* | string | 通知标题 |
-| *items.content* | string | 通知内容 如果是图片消息则是图片链接 |
-| *items.time* | string | 通知时间 |
+| *notify.title* | string | 通知标题 |
+| *notify.content* | string | 通知内容 如果是图片消息则是图片链接 |
+| *notify.time* | string | 通知时间 |	 
+| *notify.type* | string | 发布类型 1=> 文字消息, 2=>图片消息 |
+| *notify.show_type* | string | 消息展示设置 jump => 消息直接投屏 sms=> 进入消息中心 |	
 
 ### 24. **新版桌面启动器 启动广告管理**
 * 接口说明：获取直播列表

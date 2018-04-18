@@ -306,9 +306,9 @@
 | :--: | :--:| :-- |
 | *title* | string | 消息标题	 |
 | *time* | string | 发布时间 |
-| *content* | string | 发布类型 1=> 文字消息, 2=>图片消息 |
-| *type* | string | 消息内容 |
-| *picture* | string | 图片消息的图片 |
+| *content* | string | 消息内容 |
+| *type* | string | 发布类型 1=> 文字消息, 2=>图片消息 |
+| *picture* | string | 图片消息的图片 |	      
 
 ### 17. **App 包管理** 
 接口说明：获取 App 安装包
