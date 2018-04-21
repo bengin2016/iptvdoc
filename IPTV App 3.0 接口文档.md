@@ -346,7 +346,7 @@
 * 请求地址：*/api/launche/1.0/config*
 * 请求方式：*GET*
 * 参数:
->* 无
+>* *token* 令牌，获取方法参见用户登录 (必填)
 
 * 说明:
 > 无
@@ -358,6 +358,7 @@
 | *install* | integer | APK安装全局设置：1 => 允许用户安装APK  0=>禁止用户安装APK |
 | *supersetting* | integer | 是否允许执行高级系统设置：1=>允许 0=>禁止 |
 | *pkgname* | array | 要锁定的应用包名称 |
+| *startupappname* | string | 开机启动app |
 
 ### 19. **新版桌面启动器模板**
 * 接口说明：获取直播列表
