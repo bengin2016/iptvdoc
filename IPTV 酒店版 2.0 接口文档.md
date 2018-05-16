@@ -14,28 +14,30 @@ http://my.tmos.cn:15280/api/2.0/hotel/category?token=c733a686306d8c9744631ab498d
 
 * 响应字段说明:
 
-| 字段 | 类型 | 说明 |	  
-| :--: | :--:| :-- |
-| *wifi* | string | 0 wifi 关闭 <br>  1 wifi 开启  |
-| *wifiname* | string | wifi 热点名称  |
-| *wifipwd* | string | wifi 密码 |
-| *timezone* | string | 时区设置 |
-| *pwd* | string | 系统设置解锁密码 |
-| *startup_app* | string | 互动电视启动包名 |
-| *bgmode* | string | 背景显示设置 <br> 1 静态图模式 <br>2 幻灯片模式 <br> 3 视频模式 |
-| *bgpics* | string | 背景显示设置为静态图模式或幻灯片模式的图片地址 |
-| *bgvideo* | string | 背景显示设置为视频模式时候的视频地址 |
-| *src* | string | 顶标图地址 |
-| *src2* | string | 底标图地址 |
-| *src3* | string | 背景图地址 |
-| *lang* | object | 多语言设置项 |
-| *lang.name* | string | 语言名称 |
-| *lang.alias* | string | 语言简写别名, 可以用于程序判定 |
-| *lang.enable* | string | 语言是否启用 |
-| *lang.text1* | string | 扩展显示1 |
-| *lang.text2* | string | 扩展显示2 |
-| *lang.text3* | string | 底部文字信息 |
-| *payments* | object | 启用的支付方式 |
+| 字段 | 类型 | 说明 | 备注 |
+| :--: | :--:| :--:|:-- |
+| *wifi* | string | 0 wifi 关闭 <br>  1 wifi 开启  | 关闭时默认显示wifiname和wifipwd字段的值 |
+| *wifiname* | string | wifi 热点名称  | 为null时使用登录账号作为热点名称 |
+| *wifipwd* | string | wifi 密码 | 为null时使用8位数字随机密码作为密码，每次启动都随机生成 |
+| *timezone* | string | 时区设置 |  |
+| *pwd* | string | 系统设置解锁密码 |  |
+| *startup_app* | string | 互动电视启动包名 | 同属传递账号和服务器地址给APK |
+| *bgmode* | string | 背景显示设置 <br> 1 静态图模式 <br>2 幻灯片模式 <br> 3 视频模式 |  |
+| *bgpics* | string | 背景显示设置为静态图模式或幻灯片模式的图片地址 | |
+| *bgvideo* | string | 背景显示设置为视频模式时候的视频地址 | 视频模式时，视频文件循环播放  |
+| *src* | string | 顶标图地址 | |
+| *src2* | string | 底标图地址 | |
+| *src3* | string | 背景图地址 | |
+| *lang* | object | 多语言设置项 | |
+| *lang.name* | string | 语言名称 | |
+| *lang.alias* | string | 语言简写别名, 可以用于程序判定 | |
+| *lang.enable* | string | 语言是否启用 | |
+| *lang.text1* | string | 扩展显示1 | |
+| *lang.text2* | string | 扩展显示2 | |
+| *lang.text3* | string | 底部文字信息 | |
+| *payments* | object | 启用的支付方式 | |
+| *allmusic* | 全局背景音乐 | 这个接口你落下了 | |
+| *loginSMS* | 登录欢迎词 | 这个接口你落下了 |  |
 
 * 响应范例:
 <pre>
