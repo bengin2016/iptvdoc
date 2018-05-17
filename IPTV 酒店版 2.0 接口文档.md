@@ -16,7 +16,7 @@ http://my.tmos.cn:15280/api/2.0/hotel/category?token=c733a686306d8c9744631ab498d
 
 | 字段 | 类型 | 说明 |	  
 | :--: | :--:| :-- |
-| *wifi* | string | 0 wifi 关闭 <br>  1 wifi 开启  |
+| *wifi* | string | 0 wifi 关闭 <br>  1 wifi 开启 123456 |
 | *wifiname* | string | wifi 热点名称  |
 | *wifipwd* | string | wifi 密码 |
 | *timezone* | string | 时区设置 |
